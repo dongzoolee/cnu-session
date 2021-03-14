@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내가 원하는 거</title>
+
+    <style>
+        .icon_header {}
+
+        .icon_sogang {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Display : block -->
+    <!-- CLASS : 기능, 이름 -->
+    <div class="icon_header">cnu</div>
+    <div class="icon_header icon_sogang" onclick="onSogangIconClick()">서강</div>
+    <div class="icon_header">줌</div>
+
+    <!-- 진짜 글자 색상, 두께, 크기 정하는 것 외에는 -->
+    <!-- 아무 역할도 없음 -->
+    <span class="">1</span>
+    <span class="">12</span>
+    <span class="">123</span>
+
+    <button></button>
+
+    <script>
+        function onSogangIconClick() {
+            // icon_sogang 안의 
+            // 텍스트를 마포구로 수정해봄
+            let tmp = document.querySelector(".icon_sogang")
+            tmp.textContent = "마포구"
+        }
+    </script>
+</body>
+
+</html>

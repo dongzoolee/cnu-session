@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!--사이트의 전반적인 정보-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNU CNU</title>
+    <link rel="icon" href="../bendtherules.PNG" />
+
+    <!--CSS / Style Sheet-->
+    <style>
+        body {
+            background-color: #777777;
+        }
+
+        .logo {
+            color: black;
+        }
+
+        .logo_blue {
+            color: blue;
+        }
+
+        .sg_logo {
+            color: red !important;
+        }
+
+        .sg_intro {
+            color: yellow;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--SPAN-->
+    <span class="logo">
+        Pom<span class="logo_blue">p</span>
+    </span>
+
+    <!--DIV-->
+    <!--CLASS = 기능 / 속성 / 이름-->
+    <div>
+        <div class="sg_intro sg_logo">서강대학교</div>
+        <div class="sg_intro">소개</div>
+        <div class="sg_intro">오시는 길</div>
+        <div class="sg_intro">기록</div>
+        <div class="sg_intro">연혁</div>
+    </div>
+
+    <!--BUTTON-->
+    <button class="btn_join" onclick="submitJoin()">가입하기</button>
+
+    <!--GET IP ADDRESS-->
+    <div>
+        내 아이피는 :
+        <span class="user_ip"></span>
+    </div>
+
+    <script>
+        function submitJoin() {
+            alert('hi');
+        }
+
+        // 모든 데이터를 가져오는 방식이 이 형식임
+        // axios, xhr
+        fetch("https://ip.leed.at/")
+            .then(res => { return res.json() })
+            .then(data => {
+                // console.log(data.ip)
+                var userIp = document.querySelector(".user_ip")
+                userIp.textContent = data.ip
+            });
+    </script>
+</body>
+
+</html>
