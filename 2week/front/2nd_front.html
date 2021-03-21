@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        /* CSS [테두리 색깔 넣는 법] */
+        .wrap {
+            /* div 중앙정렬 */
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input {
+            width: 200px;
+            height: 29px;
+        }
+        .text_input{
+            padding-left: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- method = POST / GET -->
+        <form action="http://localhost:8000/get-data" method="POST">
+            <div class="id_wrap">
+                <label>
+                    <div>아이디</div>
+                    <input class="text_input" type="text" name="id" placeholder="아이디를 입력해주세요" />
+                </label>
+            </div>
+            <div class="pw_wrap">
+                <label>
+                    <div>비밀번호</div>
+                    <input class="text_input" type="password" name="pw" placeholder="비밀번호를 입력해주세요" />
+                </label>
+            </div>
+            <div class="phone_wrap">
+                <label>
+                    <div>전화번호</div>
+                    <input class="text_input" type="text" name="phone" placeholder="휴대폰 번호를 입력해주세요" />
+                </label>
+            </div>
+            <!-- <input type="checkbox" name="chk" />
+            <input type="radio" /> -->
+            <div class="submit_wrap">
+                <input type="submit" value="가입하기" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

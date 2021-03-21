@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEVER</title>
+    <style>
+        body {
+            background: rgb(245, 246, 247);
+        }
+
+        .wrap {
+            margin: 0 auto;
+            width: 360px;
+        }
+
+        .logo_img {
+            margin: 80px auto 60px auto;
+            width: 220px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        input {
+            height: 37px;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding-left: 14px;
+            font-size: 14px;
+        }
+
+        .input_wrap {
+            width: 100%;
+            margin: 42px auto;
+        }
+
+        .label_text {
+            font-size: 14.3px;
+            margin-bottom: 6px;
+        }
+        .register_btn{
+            width:calc(100% + 16px);
+            background-color: #00c850;
+            color:white;
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="logo_img">
+            <img src="../../tmp/logonever.png" />
+        </div>
+        <div class="form_wrap">
+            <form action="http://localhost:8000/get-data" method="POST">
+                <div class="input_wrap">
+                    <label>
+                        <div class="label_text">아이디</div>
+                        <input type="text" name="id" placeholder="아이디를 입력해주세요" />
+                    </label>
+                </div>
+                <div class="input_wrap">
+                    <label>
+                        <div class="label_text">비밀번호</div>
+                        <input type="password" name="password" placeholder="비밀번호를 입력해주세요" />
+                    </label>
+                </div>
+                <div class="input_wrap">
+                    <label>
+                        <div class="label_text">이름</div>
+                        <input type="text" name="name" placeholder="이름을 입력해주세요" />
+                    </label>
+                </div>
+                <div class="input_wrap">
+                    <input type="submit" class="register_btn" value="가입하기" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        2021 dongzoolee All Rights Reserved
+    </footer>
+</body>
+
+</html>
