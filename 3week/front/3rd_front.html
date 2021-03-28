@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        /* CSS [테두리 색깔 넣는 법] */
+        body {
+            background-color: #f5f6f7;
+        }
+
+        .wrap {
+            /* div 중앙정렬 */
+            width: 330px;
+
+            margin-left: auto;
+            margin-right: auto;
+            /* margin: 0 auto; */
+        }
+
+        /* 로고 */
+        .logo_wrap {
+            margin-top: 70px;
+            margin-bottom: 44px;
+        }
+
+        .logo {
+            width: 255px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        input {
+
+            border: none;
+            box-sizing: border-box;
+        }
+
+        .text_input {
+            width: 100%;
+            height: 45px;
+
+            padding-left: 14px;
+        }
+
+
+        .form_elem {
+            margin-bottom: 28px;
+        }
+
+        .form_elem_label {
+            font-size: 15px;
+
+            padding-left: 5px;
+            margin-bottom: 7px;
+        }
+
+        /* 메일주소 */
+        select {
+            width: 165px;
+            height: 45px;
+
+            border: none;
+        }
+
+        .mail_id_input {
+            width: 150px;
+            height: 45px;
+        }
+
+        .submit_wrap input {
+            width: 100%;
+            height: 45px;
+
+            background-color: #03c75a;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="logo_wrap">
+            <div class="logo">
+                <img src="./logo.png" />
+            </div>
+        </div>
+
+        <!-- method = POST / GET -->
+        <form action="http://localhost:8000/registerData" method="POST">
+            <div class="id_wrap form_elem">
+                <label>
+                    <div class="form_elem_label">아이디</div>
+                    <input class="text_input" type="text" name="id" placeholder="아이디를 입력해주세요" />
+                </label>
+            </div>
+            <div class="pw_wrap form_elem">
+                <label>
+                    <div class="form_elem_label">비밀번호</div>
+                    <input class="text_input" type="password" name="pw" placeholder="비밀번호를 입력해주세요" />
+                </label>
+            </div>
+            <div class="phone_wrap form_elem">
+                <label>
+                    <div class="form_elem_label">전화번호</div>
+                    <input class="text_input" type="text" name="phone" placeholder="휴대폰 번호를 입력해주세요" />
+                </label>
+            </div>
+
+            <!-- DISPLAY : FLEX 로 한 번 해보세요 ... -->
+            <div class="email_wrap form_elem">
+                <div class="form_elem_label">이메일</div>
+                <div>
+                    <input class="mail_id_input" type="text" name="email_id" /><!--
+                    --><div style="width: 15px; display: inline-block;">@</div><!--
+                    --><select name="email_host">
+                        <option value="-1">선택</option>
+                        <option value="gmail">gmail.com</option>
+                        <option value="naver">naver.com</option>
+                        <option value="sogang">sogang.ac.kr</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mailing_wrap form_elem">
+                <div class="form_elem_label">홍보메일 수신 여부</div>
+                <!-- INLINE에 바로 넣은 STYLE (권장 X) -->
+                <div style="display: flex; justify-content: space-around;">
+                    <label>
+                        <input type="radio" name="mailing" value="true" />
+                        <span>동의</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="mailing" value="false" />
+                        <span>동의 안함</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="submit_wrap">
+                <input type="submit" value="가입하기" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
